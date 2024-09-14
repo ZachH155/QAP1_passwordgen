@@ -1,0 +1,22 @@
+{
+  "name": "qap1_passwordgen",
+  "version": "1.0.0",
+  "description": "password generator",
+  "main": "index.js",
+  "bin": {
+    "passgen": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZachH155/QAP1_passwordgen.git"
+  },
+  "author": "Zachary Hulan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZachH155/QAP1_passwordgen/issues"
+  },
+  "homepage": "https://github.com/ZachH155/QAP1_passwordgen#readme"
+}
