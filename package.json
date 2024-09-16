@@ -2,9 +2,9 @@
   "name": "qap1_passwordgen",
   "version": "1.0.0",
   "description": "password generator",
-  "main": "index.js",
+  "main": "app.js",
   "bin": {
-    "passgen": "bin/index.js"
+    "passgen": "app.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
