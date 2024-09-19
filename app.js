@@ -21,27 +21,57 @@ if (!process.argv[2]) {
 }
 
 
+//for loop that cycles through process.argv to check for flags
+for (let i = 0; i < process.argv.length; i++) {
 
-//password generation
+    //length flag
+    if (process.argv[i].includes("--length")) {
+        var length = parseInt(process.argv[i].split("=")[1]);
+        
+        if (!isNaN(length)) {
+            console.log("Password length set to: " + length);
+        } else {
+            throw new Error(`
+                Password length must be a number
 
-if (process.argv.includes("--generate")) {
-
-//let characterpool = "";
-
-
-const characters ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-let length = 8
-
-let result = " ";
-const charactersLength = characters.length;
-for ( let i = 0; i < length; i++ ) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-}
-
-console.log("")
-console.log("Generated password:" + result)
-console.log("")
+                Try --help length
+                `);
+        } 
+    }
 
 
-};
+
+
+
+    //password generation
+    if (process.argv[i].includes("--generate")) {
+
+        let characters = "abcdefghijklmnopqrstuvwxyz";
+        
+
+        let result = " ";
+        const charactersLength = characters.length;
+
+        if (length) {
+            for ( let ii = 0; ii < length; ii++ ) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+        } else {
+            for ( let ii = 0; ii < 8; ii++ ) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+        }
+
+
+        console.log("")
+        console.log("Generated password:" + result)
+        console.log("")
+
+    }
+
+
+}   
+
+
+
 
