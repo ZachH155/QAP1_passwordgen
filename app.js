@@ -10,7 +10,7 @@ if (!process.argv[2]) {
         --help
 
         --length
-        --capatalize
+        --capitalize
         --numbers
         --symbols
 
@@ -48,6 +48,14 @@ for (let i = 0; i < process.argv.length; i++) {
 
         let characters = "abcdefghijklmnopqrstuvwxyz";
         
+        //customizable flags
+        if (process.argv.includes("--capatalize")) {
+            characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        } else if (process.argv.includes("--numbers")) {
+            characters += "0123456789"
+        } else if (process.argv.includes("--symbols")) {
+            characters += "!@#$%^&*"
+        }
 
         let result = " ";
         const charactersLength = characters.length;
