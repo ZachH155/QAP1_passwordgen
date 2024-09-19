@@ -10,7 +10,7 @@ if (!process.argv[2]) {
         --help
 
         --length
-        --capatalize
+        --capitalize
         --numbers
         --symbols
 
@@ -40,14 +40,24 @@ for (let i = 0; i < process.argv.length; i++) {
     }
 
 
-
-
-
     //password generation
     if (process.argv[i].includes("--generate")) {
 
         let characters = "abcdefghijklmnopqrstuvwxyz";
         
+        //customizable flags
+        if (process.argv.includes("--capitalize")) {
+            characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            console.log("Capitalization added to password")
+        }
+        if (process.argv.includes("--numbers")) {
+            characters += "0123456789"
+            console.log("Numbers added to password")
+        }
+        if (process.argv.includes("--symbols")) {
+            characters += "!@#$%^&*"
+            console.log("Symbols added to password")
+        }
 
         let result = " ";
         const charactersLength = characters.length;
