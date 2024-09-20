@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 //startup message
 if (!process.argv[2]) {

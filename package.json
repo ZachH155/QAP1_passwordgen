@@ -1,13 +1,13 @@
 {
-  "name": "qap1_passwordgen",
+  "name": "passgen",
   "version": "1.0.0",
-  "description": "password generator",
+  "description": "A Password Generator, it generates a password so you don't have to!",
   "main": "app.js",
   "bin": {
-    "passgen": "app.js"
+        "passgen": "app.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node app.js"
   },
   "repository": {
     "type": "git",
